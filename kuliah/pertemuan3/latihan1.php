@@ -9,3 +9,9 @@ while ($i <= 50) {
 }
 
 echo "selesai";
+
+echo '<hr>';
+
+for ($i = 1; $i <= 10; $i++) {
+  echo "hello world $i kali <br>";
+}
