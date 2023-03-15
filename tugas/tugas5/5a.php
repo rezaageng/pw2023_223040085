@@ -91,6 +91,7 @@ $students = [
 </head>
 
 <body>
+  <h2>Student List</h2>
   <?php foreach ($students as $student) : ?>
     <ul>
       <li><img src=" <?= $student["image"] ?>" alt="profile pic"></li>
