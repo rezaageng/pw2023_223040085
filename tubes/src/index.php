@@ -53,7 +53,7 @@
         object-cover group-hover:scale-110 transition duration-200">
         <div class="absolute z-10 bottom-0 left-0 bg-gradient-to-t from-gray-800 w-full h-full"></div>
         <div class="absolute z-10 bottom-0 left-0 p-4 sm:p-8 max-w-4xl">
-          <h1 class="text-2xl font-bold truncate sm:text-4xl">Genshin Impact 3.5 has released</h1>
+          <h1 class="text-2xl font-bold line-clamp-1 sm:text-4xl">Genshin Impact 3.5 has released</h1>
           <p class="line-clamp-2 sm:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsa voluptatem aperiam perspiciatis maiores, placeat atque nostrum culpa accusamus possimus animi sunt nam ducimus repellat quaerat, dolorum totam reprehenderit labore?</p>
         </div>
       </a>
