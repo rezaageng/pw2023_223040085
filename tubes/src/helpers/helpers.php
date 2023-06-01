@@ -45,3 +45,14 @@ function signup($data)
   mysqli_query($conn, "INSERT INTO user VALUES (null, '$username', '$password', null)");
   return mysqli_affected_rows($conn);
 }
+
+function query($query)
+{
+  global $conn;
+  $result = mysqli_query($conn, $query);
+  $rows = [];
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+  return $rows;
+}

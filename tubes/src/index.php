@@ -7,4 +7,7 @@ $dotenv = Dotenv::createImmutable('../');
 $dotenv->load();
 
 require './helpers/helpers.php';
+
+$news = query("SELECT * FROM news ORDER BY created_at DESC");
+
 require './views/index.view.php';
