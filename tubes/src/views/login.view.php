@@ -7,13 +7,16 @@ require './views/partials/header.php';
 <main class="flex justify-center items-center w-full min-h-[100dvh] p-8">
   <div class="bg-gray-800 flex flex-col p-6 w-full sm:w-96 rounded-2xl gap-4 border border-gray-600">
     <h1 class="text-2xl text-center font-bold">Login</h1>
-    <form action="" class="flex flex-col gap-4">
+    <form action="" method="post" class="flex flex-col gap-4">
       <label for="username">Username</label>
-      <input id="username" type="text" placeholder="your username" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
+      <input name="username" id="username" type="text" placeholder="your username" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="••••••••" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
-      <button class="bg-teal-600 px-4 py-2 rounded-lg">Login</button>
+      <input name="password" id="password" type="password" placeholder="••••••••" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
+      <button name="login" class="bg-teal-600 px-4 py-2 rounded-lg">Login</button>
     </form>
+    <?php if (isset($error)) : ?>
+      <span style="color: red;" class="text-sm">Username/password salah!</span>
+    <?php endif ?>
     <span class="text-sm">Don&apos;t have an account yet? <a href="./signup.php" class="text-teal-600">Sign Up</a></span>
   </div>
 </main>
