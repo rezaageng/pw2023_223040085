@@ -12,11 +12,16 @@ require './views/partials/header.php';
       <input name="username" id="username" type="text" placeholder="your username" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
       <label for="password">Password</label>
       <input name="password" id="password" type="password" placeholder="••••••••" class="bg-gray-700 px-4 py-2 rounded-lg border border-gray-600">
+      <?php if (isset($error)) : ?>
+        <span style="color: red;" class="text-sm">Username/password salah!</span>
+      <?php endif ?>
+      <label for="remember">
+        <input type="checkbox" name="remember" id="remember">
+        Remember me
+      </label>
       <button name="login" class="bg-teal-600 px-4 py-2 rounded-lg">Login</button>
     </form>
-    <?php if (isset($error)) : ?>
-      <span style="color: red;" class="text-sm">Username/password salah!</span>
-    <?php endif ?>
+
     <span class="text-sm">Don&apos;t have an account yet? <a href="./signup.php" class="text-teal-600">Sign Up</a></span>
   </div>
 </main>

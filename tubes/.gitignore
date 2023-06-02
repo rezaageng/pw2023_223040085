@@ -2,3 +2,6 @@ node_modules/
 vendor/
 
 .env
+images/
+
+.DS_Store

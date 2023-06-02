@@ -17,12 +17,12 @@ require './views/partials/navbar.php';
       <input class="bg-gray-800 border rounded-lg border-gray-500 px-2 py-1" type="text" name="keyword" autocomplete="off" placeholder="Search.." id="keyword" onchange="search('news')">
     </form>
   </div>
-  <div id="news" class="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4">
+  <div id="news" class="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 mb-16">
     <?php foreach ($news as $item) : ?>
       <div class="group">
         <a class="flex flex-col gap-2" href="./content.php?id=<?= $item['id'] ?>">
           <div class="rounded-xl overflow-clip aspect-video object-cover">
-            <img class="group-hover:scale-110 transition duration-200 w-full h-full" src="./<?= $item['image'] ?>" alt="banner">
+            <img class="group-hover:scale-110 transition duration-200 w-full h-full object-cover" src="./images/<?= $item['image'] ?>" alt="banner">
           </div>
           <div class="text-sm">
             <span><?= $item['category'] ?></span>
@@ -32,7 +32,6 @@ require './views/partials/navbar.php';
         </a>
       </div>
     <?php endforeach; ?>
-
   </div>
 </main>
 
