@@ -5,10 +5,12 @@ require '../views/partials/admin/navbar.php';
 
 <main class="max-w-7xl m-auto p-4">
   <div class="mb-4 w-full flex justify-between items-center">
-    <h1 class="text-xl font-bold">News</h1>
-    <button onclick="document.location.href = './create.php'" class="bg-teal-600 rounded-xl px-4 py-2">Add</button>
+    <form action="" method="post">
+      <input class="bg-gray-800 border rounded-lg border-gray-500 px-2 py-1" type="text" name="search" autocomplete="off" placeholder="Search.." id="search">
+    </form>
+    <button onclick=" document.location.href='./create.php'" class=" bg-teal-600 rounded-xl px-4 py-2">Add</button>
   </div>
-  <div class="flex gap-4 flex-col">
+  <div id="admin-news" class="flex gap-4 flex-col">
     <?php foreach ($news as $item) : ?>
       <div class="flex flex-col w-full bg-gray-800 rounded-xl gap-4 overflow-clip">
         <div class="p-4">

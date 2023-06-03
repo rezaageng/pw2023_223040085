@@ -158,3 +158,17 @@ function editNews($data)
 
   return mysqli_affected_rows($conn);
 }
+
+function comment($data)
+{
+  global $conn;
+  global $userId;
+
+  $comment = htmlspecialchars($data['comment']);
+  $newsId = htmlspecialchars($data['newsId']);
+
+  $query = "INSERT INTO comment VALUES (null, '$comment', NOW(), '$newsId')";
+  mysqli_query($conn, $query);
+
+  return mysqli_affected_rows($conn);
+}
