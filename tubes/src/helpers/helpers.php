@@ -150,7 +150,7 @@ function editNews($data)
   if ($_FILES['image']['error'] === 4) {
     $image = $oldImage;
   } else {
-    $image = upload();
+    $image = uploadImage();
   }
 
   $query = "UPDATE news SET title= '$title', content = '$content', category = '$category', image = '$image', updated_at = NOW() WHERE id = $id";
