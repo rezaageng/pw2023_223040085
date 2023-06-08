@@ -25,3 +25,5 @@ require '../views/partials/admin/navbar.php';
     <?php endforeach; ?>
   </div>
 </main>
+
+<?php require '../views/partials/admin/footer.php' ?>

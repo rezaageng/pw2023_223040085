@@ -37,6 +37,4 @@ require '../views/partials/admin/navbar.php';
   </form>
 </main>
 
-<?php
-require '../views/partials/footer.php';
-?>
+<?php require '../views/partials/admin/footer.php' ?>
