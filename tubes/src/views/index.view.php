@@ -21,8 +21,13 @@ require './views/partials/navbar.php';
   </div>
 
   <div class="mt-8 flex flex-col mb-1 gap-4">
-    <h2 class="font-bold text-xl">Latest News</h2>
-    <div class="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4">
+    <div class="flex item-center justify-between">
+      <h2 class="font-bold text-xl">Latest News</h2>
+      <form action="" method="post">
+        <input class="bg-gray-800 border rounded-lg border-gray-500 px-2 py-1" type="text" name="keyword" autocomplete="off" placeholder="Search.." id="keyword" onchange="search('news')">
+      </form>
+    </div>
+    <div id="news" class="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4">
       <?php foreach (array_slice($news, 1) as $item) : ?>
         <div class="group">
           <a class="flex flex-col gap-2" href="./content.php?id=<?= $item['id'] ?>">
