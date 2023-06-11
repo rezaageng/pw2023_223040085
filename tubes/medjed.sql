@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 11, 2023 at 12:58 PM
+-- Generation Time: Jun 11, 2023 at 03:26 PM
 -- Server version: 8.0.33-cll-lve
 -- PHP Version: 8.1.16
 
@@ -54,7 +54,8 @@ INSERT INTO `comment` (`id`, `comment`, `created_at`, `news_id`) VALUES
 (13, 'maharaja mahamatra king paduka lort baginda titisan maung hyperbloom aggravate kono mide banshou wa sukuzesuru yang dipertuan seno marseno', '2023-06-11 05:24:34', 1),
 (14, 'hutao &lt;3', '2023-06-11 05:24:50', 1),
 (15, 'yori yori kawaii', '2023-06-11 05:40:14', 29),
-(16, 'yuki', '2023-06-11 05:57:50', 2);
+(16, 'yuki', '2023-06-11 05:57:50', 2),
+(17, 'oooo mai gaddd', '2023-06-11 07:36:47', 29);
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `image`) VALUES
 (1, 'rezaa', '$2y$10$5NHMazVriXE2NA7D02wHau4mJ7Ml3ezKDHvYn9NJXLC9HUnW9GNF2', NULL),
 (2, 'kaizinn', '$2y$10$bUj4bliu9Sz1oCEZfLxjtOMWKDhu4QqDX4ZmrXogGyEXV1qH1BxCm', NULL),
-(3, 'krini', '$2y$10$YclzUamko2seeM9/G35pa.BaRmTnyAyLmPEbAWtCKfBTKoiiG0dfG', NULL);
+(3, 'krini', '$2y$10$YclzUamko2seeM9/G35pa.BaRmTnyAyLmPEbAWtCKfBTKoiiG0dfG', NULL),
+(4, 'ujang', '$2y$10$RDK3fhISRqFI4mJYh/s/YelF9IJu/DEOPj.iC9qpMhbplmC8M8H3y', NULL);
 
 --
 -- Indexes for dumped tables
@@ -138,19 +140,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -160,7 +162,7 @@ ALTER TABLE `user`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `FK_NEWS` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `FK_NEWS` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT;
 
 --
 -- Constraints for table `news`
